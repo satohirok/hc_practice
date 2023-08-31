@@ -3,23 +3,24 @@
 h1 {
   
   border-bottom: 1px solid;
-  display: inline-block;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 960px;
+  padding: 0 4% 0 4%;
 }
 
 /* header */
 .page-header {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  max-width: 690px;
 }
 
 .header-logo
 {
-  display: inline-block;
   background-color: black;
   color: white;
   padding: 5px 10px;
@@ -59,10 +60,16 @@ li {
   margin-bottom: 30px;
 }
 
+.introduce-title h1 {
+  width: 140px;
+  margin: 0 auto;
+}
+
 
  
 .introduce-content {
   display: flex;
+  justify-content: center;
 }
 
 .text-title {
@@ -89,8 +96,14 @@ li {
   margin-top: 80px;
 }
 
+.profile h1 {
+  width: 270px;
+  margin: 0 auto;
+}
+
 .profile-content {
   display: flex;
+  justify-content: center;
   margin-top: 30px;
 }
 
@@ -103,8 +116,8 @@ li {
 }
 
 .profile-pic {
-  width: 300px;
-  height: 200px;
+  width: 210px;
+  height: 130px;
 
 }
 
@@ -116,6 +129,7 @@ footer {
   color: #C0C0C0;
   font-size: 5px;
   border-bottom: 1px solid;
+  padding-bottom: 5px;
 }
 
 
@@ -125,35 +139,35 @@ footer {
 
   .wrapper {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 320px;
   }
   
-  body {
+  /* body {
       background-color: gainsboro;
-  }
+  } */
 
 /* header */
 
   
 
   .page-header {
-   
-    justify-content:start;
-    display: inline-block;
-    display: flex;
-    padding:0 70px;
+    max-width: 600px;
+    justify-content:center;
+    
   }
 
 
   .header-logo {
-    padding: 5px 10px;
-    display: inline-block;
+    padding: 10px 15px;
+    font-size: 17px;
+    
   }
 
-  .main-nav li {
-    margin-left: 40px;
+  
+  .main-nav li{
+    padding: 10px 15px;
+    font-size: 13px;
   }
-
 
   
 
@@ -162,6 +176,10 @@ footer {
   .introduce-content {
     display: block;
     text-align: center;
+  }
+
+  .text {
+    text-align: left;
   }
 
   .pic-space {
@@ -183,11 +201,17 @@ footer {
     display: block;
   }
 
+.profile-pic {
+  width: 320px;
+  height: 210px;
+}
+
 /* footer */
 
 footer {
   border-bottom: 5px solid;
   border-color: black;
+  
 }
 
 }
