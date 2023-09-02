@@ -1,4 +1,70 @@
 /* スマホレイアウト */
 
+/* 共通 */
+body {
+  background-color: #EDF2F6;
+}
+
 /* ヘッダー */
+header {
+  background-color: #fff;
+  
+}
+
+header .header1 {
+  border-bottom: 1px solid ;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px 5px 10px;
+}
+
+header .header_list1 {
+  list-style: none;
+  display: flex;
+}
+
+header .header2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px 5px 10px;
+}
+
+header .header_list2 {
+  list-style: none;
+  display: flex;
+}
+
+header li {
+  margin-left: 10px;
+}
+
+/* トップイメージ */
+.top_image {
+  text-align: center;
+}
+
+
+/* メイン */
+.main {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.main_icon {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+/* Discussion */
+.discussion {
+  background-color: #fff;
+}
+
+/* Read next */
+
+/* フッター */
+footer {
+  background-color: #fff;
+}
 
