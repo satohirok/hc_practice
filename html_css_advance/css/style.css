@@ -100,13 +100,26 @@ header {
   margin-top: 4px;
 }
 
-
-
 /* トップイメージ */
 .top_image {
   text-align: center;
 }
 
+.top_image figure {
+  margin-top: 45px;
+  font-size: 75px;
+}
+
+.top_image h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.top_image p {
+  margin-bottom: 40px;
+  color: #64717B;
+  font-size: 13px;
+}
 
 /* メイン */
 .main {
