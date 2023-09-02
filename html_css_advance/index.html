@@ -8,30 +8,43 @@
 rel="stylesheet"
 href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
 />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
   <link rel="stylesheet" href="css/style.css">
   <title>Zennの2種類の執筆方法について</title>
   <link rel="icon" href="images/favicon.ico">
+
 </head>
 <body>
 
   <!-- ヘッダー開始 -->
   <header>
     <div class="header1">
-      <p class="header_icon1">Zennアイコン</p>
-  
+      <figure class="header_icon1">
+        <img src="images/logo.png" alt="Zennアイコン">
+      </figure>
+
+      
+      
       <ul class="header_list1">
-        <li>検索アイコン</li>
-        <li>Log in</li>
+        <li class="search_icon">
+          <span class="material-symbols-outlined">search</span>
+        </li>
+        <li class="header_login_btn">Log in</li>
       </ul>
     </div>
   
     <div class="header2">
-      <p class="header_icon2"> Zenn公式</p>
-
-      <ul class="header_list2">
-        <li>目次</li>
-        <li>お気に入りアイコン</li>
-      </ul> 
+      <figure class="header_icon2">
+        <img src="images/zenn_twitter_icon.jpeg" alt="">
+        <p> Zenn公式</p>
+      </figure>
+      <div class="header_list2">
+        <p class="mokuzi">目次</p>
+        <p class="faborite_icon">
+          <span class="material-symbols-outlined">favorite</span>
+        </p>
+      </div> 
     </div>
   </header>
   <!-- ヘッダー終了 -->

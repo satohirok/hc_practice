@@ -1,42 +1,106 @@
-/* スマホレイアウト */
-
 /* 共通 */
 body {
   background-color: #EDF2F6;
 }
 
+/* spレイアウト */
+
 /* ヘッダー */
 header {
   background-color: #fff;
-  
+  padding: 0 30px 0 30px 0;
 }
 
-header .header1 {
-  border-bottom: 1px solid ;
+
+
+.header1 {
+  max-width: 1200px;
+  margin: 0 auto;
+ 
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 15px 5px 15px;
 }
 
-header .header_list1 {
+.header_icon1 {
+  padding-top: 20px;
+  height: 50px;
+}
+.header_icon1 img {
+  width: 110px;
+  height: auto;
+}
+
+.header_list1 {
   list-style: none;
   display: flex;
+  gap: 15px;
 }
 
-header .header2 {
+.header_list1 li {
+  padding-top: 5px;
+}
+
+.search_icon span {
+  color: #64717B;
+}
+
+.header_login_btn {
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  background: #3EA8FF;
+  border-radius: 5px;
+  padding: 7px 14px 5px 14px;
+}
+
+.header2 {
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px 5px 10px;
+  border-top: 1px solid #EDF2F6;
+  padding: 5px 15px 5px 15px;
+  height: 60px;
 }
 
-header .header_list2 {
-  list-style: none;
+.header_icon2 {
   display: flex;
+  padding-top: 5px; 
 }
 
-header li {
+.header_icon2 img {
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+}
+
+.header_icon2 p {
+  font-size: 14px;
+  font-weight: bold;
   margin-left: 10px;
+  padding-top: 5px;
 }
+
+.header_list2 {
+  list-style: none;
+  display: flex;
+ 
+}
+
+.header_list2 .mokuzi {
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.header_list2 .faborite_icon span {
+  display: inline-block;
+  color: #8F9FAA;
+  background-color: #EDF2F6;  
+  padding: 7px;
+  border-radius: 20px;
+  margin-top: 4px;
+}
+
+
 
 /* トップイメージ */
 .top_image {
