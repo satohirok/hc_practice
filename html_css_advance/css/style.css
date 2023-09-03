@@ -159,6 +159,55 @@ header {
   margin-top: 30px;
 }
 
+.main_1 {
+  margin-top: 50px;
+}
+
+.main_1 h3 {
+  border-bottom: 1px solid #E4EDF4;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.main_1 .main_1_text {
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+.main_1 .main_1_pulldown {
+  margin-top: 20px;
+  border: 1px solid #E4EDF4;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.main_2 {
+  margin-top: 50px;
+}
+
+.main_2 h3 {
+  border-bottom: 1px solid #E4EDF4;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.main_2 .main_2_text {
+  margin: 30px 0 30px 0;
+  line-height: 30px; 
+}
+
+.main_2 .main_2_text span {
+  font-weight: bold;
+}
+
+.main_2 a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #0D83FD;
+}
+
+
 
 
 
