@@ -288,11 +288,50 @@ header {
   border-radius: 25px;
 }
 
-.main_3 .main_3_tw_icon i,p  {
+.main_3 .main_3_tw_icon {
   color: #8F9FAA;
 }
 
 
+.main_4 {
+  margin-top: 30px;
+  border-bottom: 1px solid #E4EDF4;
+  padding-bottom:30px;
+  display: flex;
+  gap: 10px;
+}
+
+.main_4_zenn_tw img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.main_4_text .text {
+  font-size: 14px;
+  color: #64717B;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+.main_4_icon {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.main_4_icon .follow {
+  border: 1px solid #64717B;
+  color: #64717B;
+  padding: 5px 12px 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.main_4_tw_icon {
+  color: #64717B;
+  padding-bottom: 3px;
+}
 
 
 
