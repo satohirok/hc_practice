@@ -127,11 +127,40 @@ header {
   padding: 10px;
 }
 
-.main_icon {
+.main_head .main_icon {
   display: flex;
-  gap: 5px;
+  gap: 10px;
+  padding: 10px;
   margin-bottom: 10px;
 }
+
+.main_head .main_icon figure {
+  display: flex;
+  border: 1px solid #E4EDF4;
+  border-radius: 20px;
+  padding: 5px 8px 5px 8px;
+}
+
+.main_head .main_icon img {
+  width: 20px;
+}
+
+.main_head .main_icon p {
+  font-size: 12px;
+}
+
+.main_head h2 {
+  margin-top: 60px;
+  border-bottom: 1px solid #E4EDF4;
+  padding-bottom: 5px;
+}
+
+.main_head .main_head_text {
+  margin-top: 30px;
+}
+
+
+
 
 /* Discussion */
 .discussion {
