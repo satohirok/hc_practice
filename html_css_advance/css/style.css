@@ -448,5 +448,52 @@ header {
 /* フッター */
 footer {
   background-color: #fff;
+  padding: 50px 20px 0 20px;
+  margin-top: 70px;
 }
 
+.footer_logo img{
+  width: 100px;
+}
+
+.footer_text {
+  color: #8F9FAA;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.footer_menu {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 0;
+}
+
+.footer_menu h4 {
+  font-size: 15px;
+}
+
+.footer_menu p {
+  font-size: 14px;
+}
+
+.footer_menu1,
+.footer_menu2,
+.footer_menu3,
+.footer_menu4 {
+  line-height: 35px;
+}
+
+.footer_image {
+  margin-top: 30px;
+  border-top: 1px solid #E4EDF4;
+}
+
+.footer_image figure {
+  padding: 20px 0 30px 0;
+}
+
+.footer_image figure img {
+  width: 110px;
+  margin: 0 auto;
+}
