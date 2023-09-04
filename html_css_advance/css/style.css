@@ -374,6 +374,76 @@ header {
 }
 
 /* Read next */
+.readnext {
+  margin-top: 60px;
+  padding: 0 20px 0 20px;
+}
+
+.readnext h2 {
+  margin-bottom: 40px;
+}
+
+.readnext > div {
+  display: flex;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.readnext > div > div {
+  width: 100%;
+}
+
+
+.readnext .main_icon {
+  display: inline-block;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.readnext .text {
+  font-weight: bold;
+  color: #757A7D;
+}
+
+.readnext .readnext_user{
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.readnext_user .user_icon img {
+  width: 25px;
+  border-radius: 15px;
+}
+
+.readnext_user .user_name {
+  font-size: 12px;
+}
+
+.readnext_user .date {
+  font-size: 12px;
+  color: #64717B;
+}
+
+.readnext_user span {
+  padding-top: 1px;
+  font-size: 16px;
+  color: #8F9FAA; 
+}
+
+.readnext_user .count {
+  font-size: 12px;
+  color: #8F9FAA;
+}
+
+.double_icon_content {
+  display: flex;
+  gap: 5px;
+}
+
+
+
 
 /* フッター */
 footer {
