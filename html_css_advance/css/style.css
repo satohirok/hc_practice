@@ -533,10 +533,7 @@ footer {
     display: block;
   }
 
-  .footer_menu {
-    /* display: block; */
-  }
-
+ 
   .footer_logo {
     grid-column: 1;
     grid-row: 1;
@@ -549,8 +546,5 @@ footer {
     grid-row: 1; 
   }
 
-  .footer_image {
-    
-  }
   
 }
