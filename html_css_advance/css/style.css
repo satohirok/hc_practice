@@ -129,6 +129,12 @@ header {
   padding: 10px;
 }
 
+.left_nav {
+  display: none;
+  position: sticky;
+  top: 100px;
+}
+
 .main_head .main_icon {
   display: flex;
   gap: 10px;
@@ -333,6 +339,10 @@ header {
 .main_4_tw_icon {
   color: #64717B;
   padding-bottom: 3px;
+}
+
+.right_nav {
+  display: none;
 }
 
 /* Discussion */
@@ -547,6 +557,19 @@ footer {
     display: none;
    }
 
+   .right_nav {
+    display: block;
+   }
+
+   .mokuzi {
+    position: sticky;
+    top: 0;
+   }
+
+   .pc_resposive {
+    display: flex;
+   }
+
    footer {
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -557,7 +580,7 @@ footer {
     display: block;
   }
 
- 
+  /* サイド */
   .footer_logo {
     grid-column: 1;
     grid-row: 1;
@@ -569,6 +592,12 @@ footer {
     grid-column: 2/6;
     grid-row: 1; 
   }
-
-  
 }
+
+@media screen and (min-width: 1300px) {
+  .left_nav {
+    display: block;
+ 
+  }
+}
+
