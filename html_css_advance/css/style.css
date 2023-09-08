@@ -3,6 +3,11 @@ body {
   background-color: #EDF2F6;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* spレイアウト */
 
 /* ヘッダー */
@@ -14,7 +19,7 @@ header {
 
 
 .header1 {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -127,12 +132,43 @@ header {
 .main {
   background-color: #fff;
   padding: 10px;
+  
 }
 
 .left_nav {
   display: none;
   position: sticky;
   top: 100px;
+  margin-right: 20px;
+}
+
+.left_nav span {
+  color: #8F9FAA;
+  border: 1px solid #fff; 
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.left_fav_count {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 3px;
+  color: #8F9FAA;
+}
+
+.left_tw {
+   text-align: center;
+   margin-top: 10px;
+}
+
+.left_tw .fa {
+  color: #8F9FAA;
+} 
+
+.left_tw_text {
+  font-size: 10px;
+  color: #8F9FAA;
 }
 
 .main_head .main_icon {
@@ -331,7 +367,7 @@ header {
 .main_4_icon .follow {
   border: 1px solid #64717B;
   color: #64717B;
-  padding: 5px 12px 5px 12px;
+  padding: 5px 15px 5px 15px;
   border-radius: 20px;
   font-size: 14px;
 }
@@ -556,14 +592,71 @@ footer {
    .header2 {
     display: none;
    }
+   
+   /* .main {
+    width: 55%;
+   } */
+
+   .discussion {
+    width: 55%;
+   }
 
    .right_nav {
     display: block;
+    width: 320px;
+   }
+
+   .right_nav_content {
+    background-color: #fff;
+    margin: 0 0 30px 30px;
+    padding: 30px;
+    border-radius: 20px;
+   }
+
+   .right_tw {
+    display: flex;
+   }
+
+   .right_tw_icon {
+    display: flex;
+    margin-top: 5px;
+    gap: 10px;
+   }
+
+   .right_tw_icon .follow{
+    font-size: 14px;
+    border: 1px solid #64717B;
+    color: #64717B;
+    padding: 3px 7px 3px 7px;
+    border-radius: 20px;
+   }
+
+   .main_4_text {
+     margin-left: 20px;
+   }
+
+   .right_nav_content .text {
+    margin-top: 10px;
+    font-size: 13px;
    }
 
    .mokuzi {
     position: sticky;
-    top: 0;
+    top: 30px;
+    width: 320px;
+    background-color: #fff;
+    margin: 0 0 30px 30px;
+    padding: 20px;
+    border-radius: 20px;
+   }
+
+   .mokuzi li {
+    color: #3EA8FF;
+    line-height: 30px;
+   }
+
+   .mokuzi li span {
+    color: #000;
    }
 
    .pc_resposive {
