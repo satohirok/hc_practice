@@ -19,7 +19,7 @@ header {
 
 
 .header1 {
-  /* max-width: 1200px; */
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -50,12 +50,12 @@ header {
 }
 
 .header_login_btn {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   color: #fff;
   background: #3EA8FF;
   border-radius: 5px;
-  padding: 7px 14px 5px 14px;
+  padding: 5px 14px 5px 14px;
 }
 
 .header2 {
@@ -95,7 +95,17 @@ header {
 
 .header_list2 .mokuzi {
     margin-top: 10px;
-    margin-right: 15px;
+    color: #64717B;
+}
+
+.header_list2 .pulldown_icon {
+  color: #8F9FAA;
+  padding-top: 12px;
+  margin-right: 10px;
+}
+
+.header_list2 .pulldown_icon span {
+  font-size: 22px;
 }
 
 .header_list2 .faborite_icon span {
@@ -129,11 +139,11 @@ header {
 }
 
 /* メイン */
-.main {
+.main_content {
   background-color: #fff;
-  padding: 10px;
-  
+  padding: 30px;
 }
+
 
 .left_nav {
   display: none;
@@ -423,6 +433,16 @@ header {
 }
 
 /* Read next */
+.readnext_container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.readnext_container h2 {
+  margin-left: 20px;
+}
+
 .readnext {
   padding: 0 20px 0 20px;
 }
@@ -465,6 +485,23 @@ header {
   border-radius: 15px;
 }
 
+.readnext_user .user_icon2  {
+  position: relative;
+}
+
+.readnext_user .user_icon2 .img_icon1 {
+  width: 25px;
+  border-radius: 5px;
+}
+.readnext_user .user_icon2 .img_icon2 {
+  position: absolute;
+  width: 20px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  top: 12px;
+  left: 10px;
+}
+
 .readnext_user .user_name {
   font-size: 12px;
 }
@@ -491,14 +528,20 @@ header {
 }
 
 
+/* footer */
 
+.footer_container {
+  background-color: #fff;
+  margin-top: 40px;
+}
 
-/* フッター */
 footer {
   background-color: #fff;
   padding: 50px 20px 30px 20px;
   margin-top: 70px;
   height: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer_logo img{
@@ -540,6 +583,8 @@ footer {
 .footer_image {
   background-color: #fff;
   border-top: 1px solid #E4EDF4;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer_image figure {
@@ -553,12 +598,12 @@ footer {
 
 
 @media screen and (min-width:600px) {
-  .container {
-    /* padding: 0 30px 0 30px; */
+
+  main {
+    padding: 0 20px 0 20px;
   }
 
-
-  .main {
+  .main_content {
     border-radius: 20px;
   }
 
@@ -593,14 +638,6 @@ footer {
     display: none;
    }
    
-   /* .main {
-    width: 55%;
-   } */
-
-   .discussion {
-    width: 55%;
-   }
-
    .right_nav {
     display: block;
     width: 320px;
@@ -615,6 +652,10 @@ footer {
 
    .right_tw {
     display: flex;
+   }
+
+   .right_git {
+    padding-top: 3px;
    }
 
    .right_tw_icon {
@@ -643,11 +684,16 @@ footer {
    .mokuzi {
     position: sticky;
     top: 30px;
-    width: 320px;
+    width: 290px;
     background-color: #fff;
-    margin: 0 0 30px 30px;
+    margin-left: 30px;
     padding: 20px;
     border-radius: 20px;
+    font-size: 14px;
+   }
+
+   .mokuzi h4 {
+     font-size: 18px;
    }
 
    .mokuzi li {
@@ -673,7 +719,6 @@ footer {
     display: block;
   }
 
-  /* サイド */
   .footer_logo {
     grid-column: 1;
     grid-row: 1;
@@ -690,7 +735,6 @@ footer {
 @media screen and (min-width: 1300px) {
   .left_nav {
     display: block;
- 
   }
 }
 
