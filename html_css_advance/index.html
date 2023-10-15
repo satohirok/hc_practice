@@ -19,11 +19,11 @@ href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
   
     <!-- ヘッダー開始 -->
     <header>
-      <div class="header1">
-        <figure class="header_icon1">
+      <div class="header-container">
+        <figure class="header-icon">
           <img src="images/logo.png" alt="Zennアイコン">
         </figure> 
-        <ul class="header_list1">
+        <ul class="header-menu">
           <li class="search_icon">
             <span class="material-symbols-outlined">search</span>
           </li>
@@ -31,12 +31,12 @@ href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
         </ul>
       </div>
     </header>
-    <nav class="header2">
-        <figure class="header_icon2">
+    <nav class="sub-header">
+        <figure class="sub-header-icon">
           <img src="images/zenn_twitter_icon.jpeg" alt="">
           <p> Zenn公式</p>
         </figure>
-        <div class="header_list2">
+        <div class="sub-header-menu">
           <p class="mokuzi">目次</p>
           <p class="pulldown_icon">
             <span class="material-symbols-outlined">expand_more</span>
@@ -46,38 +46,36 @@ href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
           </p>
         </div> 
     </nav>
-    <!-- ヘッダー終了 -->
+  <!-- ヘッダー終了 -->
 
-<div class="container">
-
-    <div class="top_image">
-        <figure>📝</figure>
-        <h2>Zennの2種類の執筆方法について</h2>
-        <p>2020/09/06に公開</p>
-    </div>
-  
-<div class="pc_resposive">
-  <nav>
-    <article class="left_nav">
-      <span class="material-symbols-outlined">favorite</span>
-      <p class="left_fav_count">83</p>
-      <div class="left_tw">
-        <i style="font-size:30px" class="fa">&#xf099;</i>  
-        <p class="left_tw_text">ツイート</p> 
+  <div class="container">
+      <div class="top_image">
+          <figure>📝</figure>
+          <h2>Zennの2種類の執筆方法について</h2>
+          <p>2020/09/06に公開</p>
       </div>
-    </article>
-  </nav>
+  <div class="pc_resposive">
+    <nav>
+      <div class="left_nav">
+        <span class="material-symbols-outlined">favorite</span>
+        <p class="left_fav_count">83</p>
+        <div class="left_tw">
+          <i style="font-size:30px" class="fa">&#xf099;</i>  
+          <p class="left_tw_text">ツイート</p> 
+        </div>
+      </div>
+    </nav>
   <!-- メイン開始 -->
   <main>
    <div class="main_content">
       <!-- main_head開始 -->
       <div class="main_head">
-        <div class="main_icon">
-          <figure class="main_icon1">
+        <div class="main-icons">
+          <figure class="main-zen-icon">
             <img src="images/main_head1.png" alt="zennのアイコン">
             <p>Zenn</p>
           </figure>
-          <figure class="main_icon2">
+          <figure class="main-idea-icon">
             <img src="images/main_head2.png" alt="ideaのアイコン">
             <p>idea</p>
           </figure>
@@ -169,7 +167,7 @@ href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
   </main>
  
       <!-- right_nav開始 -->
-      <nav class="right_nav">
+      <div class="right_nav">
         <div class="right_nav_content">
           <article class="right_tw">
             <figure class="main_4_zenn_tw">
@@ -196,7 +194,7 @@ href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
               <li><span>2.ローカルのテキストエディター + CLI</span></li>
             </ul>
           </article>
-        </nav>
+      </div>
       <!-- right_nav終了 -->
 </div> <!--pc_responsive終了タグ-->
 </div> <!--container終了タグ-->
@@ -421,7 +419,7 @@ href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
           </figure>
           <p class="footer_text">エンジニアのための<br class="sp_br">情報共有コミュニティ</p>
         </div>
-        <section class="footer_menu">
+        <section class="footer-menu-wrapper">
           <div class="footer_menu1">
             <h4>About</h4>
             <p>Zennについて</p>
