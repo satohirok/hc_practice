@@ -9,25 +9,19 @@ def calender(year,month)
     first_day = Date.new(year,month,1).mday
     first_wday = Date.new(year,month,1).wday
     
-    p "    #{month}月 #{year}年   "
+    p "    #{month}月 #{year}年    "
     p "月 火 水 木 金 土 日"
     
-   
     if first_wday == 0
         first_wday += 7
     end
     blank = '   ' * (first_wday - 1)
     print blank
     
-    
     first_day.upto(last_day) {|d| 
-    
-     if d <= 9
-       print " #{d} "
-     else
-       print "#{d} "
-     end
-     
+
+     print "#{d}".rjust(3)
+
      if ((first_wday -1) + d) % 7 == 0
          puts "\n"
      end
@@ -50,7 +44,7 @@ def opt
   if month > 0 && month <= 12
     test(month)
   else
-    p "#{month} is neither a month number (1..12) nor a name"
+    raise  ArgumentError , "#{month} is neither a month number (1..12) nor a name"
   end
 end
 
@@ -60,13 +54,4 @@ def test(month)
   
   calender(year,month)
 end
-
 opt
-
-
-
-
-
-
-
-
