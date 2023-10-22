@@ -39,7 +39,7 @@ def opt
       options[:month] = month.to_i
     end
   end.parse!
-
+  
   month = options[:month] || tmonth
   if month > 0 && month <= 12
     test(month)
