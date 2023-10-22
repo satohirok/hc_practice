@@ -2,13 +2,11 @@ X = []
 18.times do
 X << gets.to_i 
 end
-p X
 
 Y = []
 18.times do
 Y << gets.to_i
 end
-p Y
 
 result = []
 
