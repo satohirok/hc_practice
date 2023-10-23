@@ -12,12 +12,10 @@ result = []
 
 0.upto(17) do |n|
   if X[n] > 5 || X[n] < 3
-    puts "#{n + 1} ホール目の値#{X[n]}は不正です"
-    puts '規定スコア(X)は3〜5に設定して下さい'
+    raise ArgumentError , "#{n + 1} ホール目の値#{X[n]}は不正です。規定スコア(X)は3〜5に設定して下さい"
     exit
   elsif Y[n] < 1 
-    puts "#{n + 1} 打目の値#{Y[n]}は不正です" 
-    puts '打数(Y)の値は正の値に設定して下さい'
+    raise ArgumentError , "#{n + 1} 打目の値#{Y[n]}は不正です。打数(Y)の値は正の値に設定して下さい" 
     exit
   end
   stroke = Y[n]
