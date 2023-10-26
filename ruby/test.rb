@@ -35,8 +35,3 @@ p vending.put_in("モンスター")
 p vending.sell
 # 購入処理後のSuicaチャージ残高を確認(5500 - 1720 = 3780)
 p vending.current_charge
-
-
-
-
-

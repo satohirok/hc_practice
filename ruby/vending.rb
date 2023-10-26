@@ -64,7 +64,6 @@ class Vending < Suica
         @p_stock -= 1
         # Suicaのチャージ残高を減らす
         @current_charge -= @p_price
-      
         # 売り上げ金額を増やす
         @sell += @p_price 
     elsif name == "モンスター" && @m_stock > 0 && @current_charge >= @m_price
@@ -97,21 +96,3 @@ class Vending < Suica
     @sell
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
