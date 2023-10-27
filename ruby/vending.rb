@@ -2,7 +2,6 @@ require "./suica.rb"
 require "./juice.rb"
 
 class Vending < Suica
-  attr_reader :sell
   def initialize(amount)
     @suica = Suica.new
     @current_charge = @suica.charge(amount)
@@ -23,26 +22,36 @@ class Vending < Suica
     # 初期在庫にいろはす(120円)5本を追加する。
     @juice_info[2] << 5
     @i_stock = @juice_info[2][2]
+    # 自動販売機は現在の売上金額を取得できる(外部からは取得できない)
     @sell = 0
   end
 
   # 自動販売機は購入可能なドリンクのリストを取得できる
   def list
-    p @p_name
-    p @m_name
-    p @i_name
+    if @p_stock >= 1 
+      p @p_name
+      p @p_stock
+    end
+    if @m_stock >= 1
+      p @m_name
+      p @m_stock
+    end
+    if @i_stock >= 1
+      p @i_name
+      p @i_stock
+    end
   end
 
-  # 自動販売機は在庫を取得できる(購入処理後)
-  def p_stock
+  # 自動販売機は在庫を取得できる
+  def p_stock #ペプシ
     @p_stock
   end
 
-  def m_stock
+  def m_stock #モンスター
     @m_stock
   end
 
-  def i_stock
+  def i_stock # いろはす
     @i_stock
   end
 
@@ -63,16 +72,16 @@ class Vending < Suica
         # 自動販売機はジュースの在庫を減らす
         @p_stock -= 1
         # Suicaのチャージ残高を減らす
-        @current_charge -= @p_price
+        @suica.buy(@p_price)
         # 売り上げ金額を増やす
         @sell += @p_price 
     elsif name == "モンスター" && @m_stock > 0 && @current_charge >= @m_price
         @m_stock -= 1
-        @current_charge -= @m_price
+        @suica.buy(@m_price)
         @sell += @m_price 
     elsif name == "いろはす" && @i_stock > 0 && @current_charge >= @i_price
         @i_stock -= 1
-        @current_charge -= @i_price
+        @suica.buy(@i_price)
         @sell += @i_price 
     # チャージ残高が足りない場合もしくは在庫がない場合、購入操作を行った場合は例外を発生させる
     elsif @p_stock <= 0
@@ -84,15 +93,5 @@ class Vending < Suica
     elsif @current_charge < @p_price || @current_charge < @m_price || @current_charge < @i_price
       raise "Suicaの残高が不足しております"
     end
-  end
-
-  # Suicaの現在のチャージ残高
-  def current_charge
-    @current_charge
-  end 
-   
-  # 自動販売機は現在の売上金額を取得できる
-  def sell
-    @sell
   end
 end

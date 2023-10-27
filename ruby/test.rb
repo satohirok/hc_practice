@@ -31,7 +31,4 @@ p vending.put_in("いろはす")
 p vending.m_stock
 # モンスター補充(3 + 1 = 4)
 p vending.put_in("モンスター")
-# 売上金額取得(ペプシ150 * 6 = 900 + いろはす120 * 3 = 360 + モンスター230 * 2 = 460 合計:1720)
-p vending.sell
-# 購入処理後のSuicaチャージ残高を確認(5500 - 1720 = 3780)
-p vending.current_charge
+
