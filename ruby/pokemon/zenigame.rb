@@ -7,7 +7,4 @@ class Zenigame < Pokemon
   end
 end
 
-zeni = Zenigame.new("ゼニガメ","みず","",100)
-zeni.attack
-zeni.change_name("うんこ")
-zeni.attack
+

@@ -7,7 +7,3 @@ class Pikachu < Pokemon
   end
 end
 
-pika = Pikachu.new("ピカチュウ","でんき","",100)
-pika.attack
-pika.change_name("うんこ")
-pika.attack
