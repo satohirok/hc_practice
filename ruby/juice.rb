@@ -1,43 +1,26 @@
 class Juice
-  def initialize
-      # ジュースは名前と値段の情報をもつ
-      @juice_info = [["ペプシ",150],["モンスター",230],["いろはす",120]]
-      # 名前情報
-      @p_name = @juice_info[0][0]
-      @m_name = @juice_info[1][0]
-      @i_name = @juice_info[2][0]
-      # 値段情報
-      @p_price = @juice_info[0][1]
-      @m_price = @juice_info[1][1]
-      @i_price = @juice_info[2][1]
+  def initialize(name,price)
+      @name = name
+      @price = price
   end
 
-  def juice_info
-    @juice_info
+  def name
+    @name
   end
 
-  def p_name
-    @p_name
+  def price
+    @price
   end
+end
 
-  def m_name
-    @m_name
-  end
+p_juice = Juice.new("ペプシ",150)
+m_juice = Juice.new("モンスター",150)
+i_juice = Juice.new("いろはす",120)
 
-  def i_name
-    @i_name
-  end
+stock = []
 
-  def p_price
-    @p_price
-  end
-
-  def m_price
-    @m_price
-  end
-
-  def i_price
-    @i_price
-  end
-
+5.times do 
+stock << p_juice
+stock << m_juice
+stock << i_juice
 end

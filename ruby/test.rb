@@ -1,8 +1,14 @@
 require './vending.rb'
 
-# 引数にSuicaへのチャージ金額を指定(5000円チャージ)
-vending = Vending.new(5000)
-#購入リスト確認
+vending = Vending.new
+vending.charge(5000)
+# 購入リスト確認(各商品が5本ずつ)
+vending.list
+# 在庫補充
+vending.put_in("ペプシ")
+vending.put_in("いろはす")
+vending.put_in("モンスター")
+# 購入リスト確認(各商品が6本ずつ)
 vending.list
 #ペプシ購入
 vending.buy("ペプシ")
@@ -10,25 +16,26 @@ vending.buy("ペプシ")
 vending.buy("ペプシ")
 vending.buy("ペプシ")
 vending.buy("ペプシ")
-#ペプシ売り切れ (5 - 5 = 0)
-#在庫確認
-p vending.p_stock
-#ペプシ補充→在庫1であることを確認(0 + 1 = 1)
-p vending.put_in("ペプシ")
-# ペプシが購入できることを確認
+# 購入リスト確認(ペプシが1本)
+vending.list
+# ペプシ購入
 vending.buy("ペプシ")
-#いろはす、モンスター購入↓
+#ペプシ売り切れ (6 - 6 = 0)
+vending.list
+# ペプシを購入しようとするとエラー(次の処理が進まないので確認後コメントアウト)
+# vending.buy("ペプシ")
+# ペプシ補充
+vending.put_in("ペプシ")
+# 再びペプシが買えることを確認
+# いろはす、モンスター購入↓
 vending.buy("いろはす")
 vending.buy("いろはす")
 vending.buy("いろはす")
 vending.buy("モンスター")
 vending.buy("モンスター")
-# いろはすの在庫数確認(5 - 3 = 2)
-p vending.i_stock
-# いろはす補充 (2 + 1 = 3)
-p vending.put_in("いろはす")
-# モンスターの在庫数確認(5 - 2 = 3)
-p vending.m_stock
-# モンスター補充(3 + 1 = 4)
-p vending.put_in("モンスター")
+# 購入リスト確認(いろはす:3 モンスター:2)
+vending.list
+
+
+
 

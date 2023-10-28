@@ -15,7 +15,11 @@ class Suica
   end
   # Suicaのチャージ残高を減らす
   def buy(price)
-    @current_charge -= price
+    if @current_charge >= price 
+       @current_charge -= price
+    else
+      raise "チャージ金額が不足しています"
+    end
   end
   # Suicaの現在のチャージ残高
   def current_charge
