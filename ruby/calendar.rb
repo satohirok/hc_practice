@@ -11,7 +11,7 @@ def calender(year,month)
     
     p "    #{month}月 #{year}年    "
     p "月 火 水 木 金 土 日"
-    
+   
     if first_wday == 0
         first_wday += 7
     end
