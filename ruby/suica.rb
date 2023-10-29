@@ -7,19 +7,14 @@ class Suica
   # Suicaには100円以上の任意の金額をチャージできる
   def charge(amount)
       # 100円未満をチャージしようとした場合は例外を発生させる
-      if amount < 100
-          raise "100円未満はチャージできません。"
-      else
-          p @current_charge += amount
-      end
+      raise "100円未満はチャージできません。" if amount < 100
+      p @current_charge += amount
+    
   end
   # Suicaのチャージ残高を減らす
   def buy(price)
-    if @current_charge >= price 
-       @current_charge -= price
-    else
-      raise "チャージ金額が不足しています"
-    end
+    raise "チャージ金額が不足しています" if @current_charge < price
+    @current_charge -= price
   end
   # Suicaの現在のチャージ残高
   def current_charge
