@@ -33,9 +33,5 @@ vending.buy("いろはす")
 vending.buy("いろはす")
 vending.buy("モンスター")
 vending.buy("モンスター")
-# 購入リスト確認(いろはす:3 モンスター:2)
+# 購入リスト確認(いろはす:3 モンスター:4)
 vending.list
-
-
-
-
