@@ -1,4 +1,5 @@
 class Juice
+  attr_reader :name
   def initialize(name,price)
       @name = name
       @price = price
