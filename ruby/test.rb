@@ -1,7 +1,7 @@
 require './vending.rb'
 
 vending = Vending.new
-vending.charge(100)
+vending.charge(5000)
 # 購入リスト確認(各商品が5本ずつ)
 vending.list
 # 在庫補充

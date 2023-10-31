@@ -32,9 +32,9 @@ class Vending < Suica
   # 自動販売機は購入可能なドリンクのリストを取得できる
   def list
     p "購入可能リスト"
-    p "ペプシ" if stock("ペプシ").size >= 0
-    p "モンスター" if stock("モンスター").size >= 0
-    p "いろはす" if stock("いろはす").size >= 0
+    p "ペプシ" if stock("ペプシ").size > 0
+    p "モンスター" if stock("モンスター").size > 0
+    p "いろはす" if stock("いろはす").size > 0
   end
 
   # 自動販売機に在庫を補充できるようにする
