@@ -10,7 +10,6 @@ vending.put_in("いろはす",120)
 vending.put_in("モンスター",230)
 # 購入リスト確認(各商品が6本ずつ)
 vending.list
-vending.st
 #ペプシ購入
 vending.buy("ペプシ",150)
 vending.buy("ペプシ",150)
@@ -38,4 +37,3 @@ vending.buy("モンスター",230)
 vending.buy("モンスター",230)
 # 購入リスト確認(いろはす:3 モンスター:4)
 vending.list
-vending.st
