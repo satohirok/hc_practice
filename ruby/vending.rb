@@ -10,9 +10,9 @@ class Vending < Suica
     # 初期在庫にいろはす(120円)5本を追加する。
     @stock = []
     5.times do
-      @stock << Juice.new("ペプシ",150).name
-      @stock << Juice.new("モンスター",230).name
-      @stock << Juice.new("いろはす",120).name
+      @stock << Juice.new("ペプシ",150)
+      @stock << Juice.new("モンスター",230)
+      @stock << Juice.new("いろはす",120)
     end
     # 売上金額は外部から取得できない
     @sell = 0
@@ -26,37 +26,36 @@ class Vending < Suica
   
   # 自動販売機は在庫を取得できる
   def stock(name)
-    @stock.select{|n| n == name}
+    @stock.select{|juice| juice.name == name}
   end
 
   # 自動販売機は購入可能なドリンクのリストを取得できる
   def list
     p "購入可能リスト"
-    p "ペプシ" if stock("ペプシ").size > 0
-    p "モンスター" if stock("モンスター").size > 0
-    p "いろはす" if stock("いろはす").size > 0
+    p @stock.map {|juice| juice.name}.uniq
   end
 
   # 自動販売機に在庫を補充できるようにする
   def put_in(name,price)
     juice = Juice.new(name,price)
-    @stock << juice.name
+    @stock << juice
   end
 
-  def buy(name,price)
-    juice = Juice.new(name,price)
-    # ジュース値段以上のチャージ残高がある条件下
+  def buy(name)
+    #stockメソッドからjuiceインスタンスを取得
+    juice = self.stock(name)[0]
+    # 在庫がない場合はエラー文を表示
     raise "#{name} は売り切れです" if stock(name).size == 0
+    # Suicaのチャージ残高が足りない場合はエラー文を表示
     raise "チャージ残高が不足しています" if juice.price > @suica.current_charge
     # 自動販売機はジュースの在庫を減らす
-    @stock.delete_at(@stock.index(juice.name)) 
+    temp = []
+    j_stock = @stock.select{|juice| juice.name == name}
+    temp << j_stock[0]
+    @stock -= temp
     # Suicaのチャージ残高を減らす
     @suica.buy(juice.price)
     # 売り上げ金額を増やす
     @sell += juice.price
   end
 end
-
-
-
-
