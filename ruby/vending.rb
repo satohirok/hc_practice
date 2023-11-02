@@ -5,7 +5,7 @@ class Vending < Suica
   def initialize
     @suica
     @current_charge = 0
-    # 初期状態で、ペプシ(150円)を5本格納している m
+    # 初期状態で、ペプシ(150円)を5本格納している。
     # 初期在庫にモンスター(230円)5本を追加する。
     # 初期在庫にいろはす(120円)5本を追加する。
     @stock = []
@@ -42,17 +42,14 @@ class Vending < Suica
   end
 
   def buy(name)
-    #stockメソッドからjuiceインスタンスを取得
-    juice = self.stock(name)[0]
+    #@stockからjuiceインスタンスを取得
+    juice = @stock.find{ |s| s.name == name }
     # 在庫がない場合はエラー文を表示
-    raise "#{name} は売り切れです" if stock(name).size == 0
+    raise "#{name} は売り切れです" if juice.nil?
     # Suicaのチャージ残高が足りない場合はエラー文を表示
     raise "チャージ残高が不足しています" if juice.price > @suica.current_charge
     # 自動販売機はジュースの在庫を減らす
-    temp = []
-    j_stock = @stock.select{|juice| juice.name == name}
-    temp << j_stock[0]
-    @stock -= temp
+    @stock = @stock - [juice]
     # Suicaのチャージ残高を減らす
     @suica.buy(juice.price)
     # 売り上げ金額を増やす
