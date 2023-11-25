@@ -1,0 +1,85 @@
+[users]
+  *id {label: "bigint, not null"}
+  email {label: "varchar, not null, uniq" }
+  user_name {label:"varchar, not null, uniq"}
+  phone_number {label:"int, uniq"}
+  name {label:"varchar"}
+  introduce {label:"varchar"}
+  place {label:"varchar"}
+  web {label:"varchar"}
+  birth_day {label:"datetime"}
+  profile_pic {label:"varchar"}
+  avatar_pic {label:"varchar"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[tweets] {bgcolor: "#00FFFF"}
+  *id {label: "bigint, not null"}
+  user_id {label: "bigint, not null, FK(users)"}
+  content {label: "varchar, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[favorites] {bgcolor: "#d0e0d0"}
+  *id {label: "bigint, not null"}
+  user_id {label: "bigint, not null, FK(users)"}
+  tweet_id{label: "bigint not null, FK(tweets)"}
+  count {label: "int"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[retweets] {bgcolor: "#d0e0d0"}
+  *id {label: "bigint, not null"}
+  user_id {label: "bigint, not null, FK(users)"}
+  tweet_id{label: "bigint not null, FK(tweets)"}
+  count {label: "int"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[followers] {bgcolor: "#d0e0d0"}
+  *id {label: "bigint, not null"}
+  user_id {label: "bigint, not null, FK(users)"}
+  count {label: "int"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[messages] {bgcolor: "#d0e0d0"}
+  *id {label: "bigint, not null"}
+  user_id {label: "bigint, not null, FK(users)"}
+  count {label: "varchar, not null"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[notifications] {bgcolor: "#d0e0d0"}
+  *id {label: "bigint, not null"}
+  tweet_id{label: "bigint not null, FK(tweets)"}
+  follower_id{label: "bigint not null, FK(followers)"}
+  count {label: "int"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+[bookmarks] {bgcolor: "#d0e0d0"}
+  *id {label: "bigint, not null"}
+  user_id {label: "bigint, not null, FK(users)"}
+  tweet_id{label: "bigint not null, FK(tweets)"}
+  count {label: "int"}
+  created_at { label: "datatime, not null"}
+  updated_at { label: "datatime, not null"}
+
+# Cardinality    Syntax
+# 0 or 1         ?
+# exactly 1      1
+# 0 or more      *
+# 1 or more      +
+
+users 1--* `tweets`
+users 1--* `favorites`
+users 1--* `retweets`
+users 1--* `messages`
+users 1--* `followers`
+users 1--* `bookmarks`
+tweets 1--* `favorites`
+tweets 1--* `retweets`
+tweets 1--* `bookmarks`
+favorites 1--1 `notifications`
+followers 1--1 `notifications`
